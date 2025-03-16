@@ -1,2 +1,5 @@
-# CS310
-This Repo will be used for my course work in CS310 (Programming with C++)
+# CS 310 C++
+
+## Contributors
+- Instructor: Robert Flowers
+- Zachary White
