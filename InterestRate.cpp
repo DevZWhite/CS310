@@ -1,8 +1,24 @@
 #include <iostream>
 #include <iomanip>
-#include <locale>
+#include <sstream>
 
 using namespace std;
+
+// Function to format numbers with thousands separators manually
+string formatWithThousandsSeparator(double value) {
+    stringstream ss;
+    ss << fixed << setprecision(2) << value;
+    string numStr = ss.str();
+    int pos = numStr.find('.');
+    int insertPos = pos - 3;
+
+    while (insertPos > 0) {
+        numStr.insert(insertPos, ",");
+        insertPos -= 3;
+    }
+
+    return numStr;
+}
 
 int main() {
     // Declare variables
@@ -27,12 +43,8 @@ int main() {
     // Compute the interest
     interest = averageDailyBalance * interestRate;
 
-    // Format and display the interest
-    cout << fixed << setprecision(2); // Set decimal precision to 2 places
-    locale loc(""); // Use default system locale for thousands separator
-    cout.imbue(loc);
-    
-    cout << "Interest on the unpaid balance: $" << interest << endl;
+    // Manually format and display the interest
+    cout << "Interest on the unpaid balance: $" << formatWithThousandsSeparator(interest) << endl;
 
     return 0;
 }
