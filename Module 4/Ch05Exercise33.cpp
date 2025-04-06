@@ -63,8 +63,6 @@ do {
 
 } while (true); // Repeat until we can no longer prepare another dish
 
-    
-
     // Outputs the result after looping
     // this helps the system return results by, allowing for dish(es)
     if (dishesPrepared == 1) {
