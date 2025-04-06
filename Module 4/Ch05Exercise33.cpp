@@ -37,11 +37,12 @@ int main() {
 
     // encountered an error innitially when running my application
     // If the first dish takes longer than the total time the user is displayed the following
-    // "Bianca does not have time to prepare any dishes."
-    if (a > t) {
-        cout << "Not enough time to prepare any dishes" << endl;
-        return 0;
-    }
+    // "Not enough time to prepare any dishes."
+bool hasEnoughTime = (a <= t);
+if (!hasEnoughTime) {
+    std::cout << "Not enough time to prepare any dishes" << std::endl;
+    return 0;
+}
 
     int remainingTime = t - a;
     int dishesPrepared = 1;
