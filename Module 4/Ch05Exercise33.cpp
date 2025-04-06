@@ -47,17 +47,25 @@ int main() {
     int dishesPrepared = 1;
     int nextDishTime = a;
 
-    while (true) {
-        nextDishTime += b;
-        if (nextDishTime <= remainingTime) {
-            dishesPrepared++;
-            remainingTime -= nextDishTime;
-        } else {
-            break;
-        }
-    }
+// Start an infinite loop that will keep preparing dishes until we run out of time
+do {
+    // Add the base time 'b' to the next dish's preparation time
+    nextDishTime += b;
 
-    // Outputs the result after calculation
+    // If there's not enough remaining time to prepare this dish, break out of the loop
+    if (nextDishTime > remainingTime) break;
+
+    // running count of dishes prepared
+    dishesPrepared++;
+
+    // Subtracts running count from total
+    remainingTime -= nextDishTime;
+
+} while (true); // Repeat until we can no longer prepare another dish
+
+    
+
+    // Outputs the result after looping
     // this helps the system return results by, allowing for dish(es)
     if (dishesPrepared == 1) {
         cout << "Bianca can only prepare one dish." << endl;
