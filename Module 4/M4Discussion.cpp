@@ -22,7 +22,6 @@ int main() {
 			break;
 		}
 
-		// Error handling can be added here for invalid input
 		number = stoi(input);
 		sum = sum + number;
 	}
