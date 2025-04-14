@@ -3,7 +3,7 @@
 // Description:
 // The user enters the hourly rate, the total consulting time, and whether the person has low income. 
 // The program should output the billing amount.
-// Extra abilties such as entering multiple clients, rounding numbers with setprecision, and
+// Extra abilties such as entering multiple clients, rounding numbers with setprecision
 
 // Tested on Windows 11, Visual Studio Code
 
