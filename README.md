@@ -5,7 +5,7 @@
 This repository contains source code for a C++ class project developed as part of a programming course from Bellevue University. The goal of this project is to demonstrate an understanding of object-oriented programming principles, file handling, and C++ syntax through practical implementation.
 
 ## Contributors
-- Instructor: Robert Flowers
+- Instructor: Dr. Robert Flowers
 - Zachary White
 
 ## Project Structure
